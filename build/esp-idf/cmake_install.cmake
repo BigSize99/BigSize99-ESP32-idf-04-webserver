@@ -108,7 +108,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/unity/cmake_install.cmake")
   include("G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/wifi_provisioning/cmake_install.cmake")
   include("G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/main/cmake_install.cmake")
-  include("G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/input_iot/cmake_install.cmake")
+  include("G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/dht11_iot/cmake_install.cmake")
   include("G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/output_iot/cmake_install.cmake")
 
 endif()

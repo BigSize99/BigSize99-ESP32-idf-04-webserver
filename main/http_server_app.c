@@ -18,6 +18,9 @@
 #include "esp_eth.h"
 #include <esp_http_server.h>
 #include "output_iot.h"
+#include "dht11_iot.h"
+#include "cJSON.h"
+
 /* A simple example that demonstrates how to create GET and POST
  * handlers for the web server.
  */
@@ -56,12 +59,34 @@ static const httpd_uri_t get_pageHTML_dht11 = {
 /* An HTTP GET handler */
 static esp_err_t hello_get_handler2(httpd_req_t *req)
 {
-    const char* resp_str = (const char*) "{\"temperature\" : \"25.10\", \"humidity\" : \"10.25\"}"; // Gửi chuỗi JSON: KEY : value
+    // const char* resp_str = (const char*) "{\"temperature\" : \"25.10\", \"humidity\" : \"10.25\"}"; // Gửi chuỗi JSON: KEY : value
+    // const char* resp_str = (const char*)DHT11_read().temperature;
+
+
+    // Lấy dữ liệu nhiệt độ và độ ẩm từ cảm biến DHT11
+    float T = DHT11_read().temperature;
+    float H = DHT11_read().humidity;
+    T = esp_random() % 50;
+    H = esp_random() % 100;
+
+    // Tạo đối tượng JSON
+    cJSON *root = cJSON_CreateObject();
+
+    // Thêm trường dữ liệu nhiệt độ và độ ẩm vào đối tượng JSON
+    // Thêm trường dữ liệu nhiệt độ và độ ẩm vào đối tượng JSON
+    cJSON_AddNumberToObject(root, "temperature", T);
+    cJSON_AddNumberToObject(root, "humidity", H);
+
+    // Chuyển đổi đối tượng JSON thành chuỗi JSON
+    const char * resp_str = cJSON_Print(root);
+
+    // Gửi phản hồi HTTP chứa chuỗi JSON
+    httpd_resp_set_type(req, "application/json");
     httpd_resp_send(req, resp_str, strlen(resp_str)); 
     return ESP_OK;
 }
 
-static const httpd_uri_t get_data_dht11 = {
+    static const httpd_uri_t get_data_dht11 = {
     .uri       = "/getDATA",
     .method    = HTTP_GET,
     .handler   = hello_get_handler2,

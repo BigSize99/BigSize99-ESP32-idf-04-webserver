@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: wifi_station
+# Project: station
 # Configuration: 
 # =============================================================================
 # =============================================================================
@@ -14,7 +14,7 @@
 #############################################
 # Rule for compiling ASM files.
 
-rule ASM_COMPILER__wifi_station.2eelf
+rule ASM_COMPILER__station.2eelf
   depfile = $DEP_FILE
   deps = gcc
   command = ccache G:\Caiphanmem\ESP32-IDF\Espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule ASM_COMPILER__wifi_station.2eelf
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__wifi_station.2eelf
+rule C_COMPILER__station.2eelf
   depfile = $DEP_FILE
   deps = gcc
   command = ccache G:\Caiphanmem\ESP32-IDF\Espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out   -c $in
@@ -34,7 +34,7 @@ rule C_COMPILER__wifi_station.2eelf
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__wifi_station.2eelf
+rule CXX_EXECUTABLE_LINKER__station.2eelf
   command = cmd.exe /C "$PRE_LINK && G:\Caiphanmem\ESP32-IDF\Espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-g++.exe  $FLAGS  $LINK_FLAGS @$RSP_FILE  -o $TARGET_FILE  && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   rspfile = $RSP_FILE
@@ -1456,7 +1456,7 @@ rule CXX_STATIC_LIBRARY_LINKER____idf_main
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER____idf_input_iot
+rule C_COMPILER____idf_dht11_iot
   depfile = $DEP_FILE
   deps = gcc
   command = ccache G:\Caiphanmem\ESP32-IDF\Espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out   -c $in
@@ -1466,7 +1466,7 @@ rule C_COMPILER____idf_input_iot
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER____idf_input_iot
+rule CXX_STATIC_LIBRARY_LINKER____idf_dht11_iot
   command = cmd.exe /C "$PRE_LINK && G:\Caiphanmem\ESP32-IDF\Espressif\tools\cmake\3.16.4\bin\cmake.exe -E remove $TARGET_FILE && G:\Caiphanmem\ESP32-IDF\Espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && G:\Caiphanmem\ESP32-IDF\Espressif\tools\xtensa-esp32-elf\esp-2020r3-8.4.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT

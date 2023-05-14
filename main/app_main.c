@@ -20,6 +20,7 @@
 #include "lwip/err.h"
 #include "lwip/sys.h"
 #include "output_iot.h"
+#include "dht11_iot.h"
 
 /* The examples use WiFi configuration that you can set via project configuration menu
 
@@ -127,6 +128,7 @@ void wifi_init_sta(void)
 
 void app_main(void)
 {
+    DHT11_init(GPIO_NUM_4);
     output_io_create(2);
     //Initialize NVS
     esp_err_t ret = nvs_flash_init();

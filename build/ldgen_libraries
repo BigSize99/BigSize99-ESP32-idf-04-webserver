@@ -65,5 +65,5 @@ G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/ulp/libulp.a
 G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/unity/libunity.a
 G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/main/libmain.a
-G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/input_iot/libinput_iot.a
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/dht11_iot/libdht11_iot.a
 G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/esp-idf/output_iot/liboutput_iot.a
