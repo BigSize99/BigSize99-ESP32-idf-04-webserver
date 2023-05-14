@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/CMakeFiles/bootloader
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/CMakeFiles/bootloader.rule
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/CMakeFiles/bootloader-complete.rule
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/station/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule

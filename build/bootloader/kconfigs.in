@@ -1,0 +1,5 @@
+source "G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/esp-idf-v4.2.4/components/efuse/Kconfig"
+source "G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/esp-idf-v4.2.4/components/esp32/Kconfig"
+source "G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/esp-idf-v4.2.4/components/esp_common/Kconfig"
+source "G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/esp-idf-v4.2.4/components/log/Kconfig"
+source "G:/Caiphanmem/ESP32-IDF/Espressif/frameworks/esp-idf-v4.2.4/components/spi_flash/Kconfig"
